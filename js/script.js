@@ -46,9 +46,9 @@ document.getElementById("cadastroForm").addEventListener("submit", function(e){
 
         const mensagem =
 
-`🐾 *Novo Cadastro Vetlar*
+` *Novo Cadastro Vetlar*
 
-👤 *Tutor*
+  *Tutor*
 
 Nome: ${dados.nome}
 RG: ${dados.rg}
@@ -62,7 +62,7 @@ Número: ${dados.numero}
 Profissão: ${dados.profissao}
 Telefone: ${dados.telefone}
 
-🐶 *Pet*
+  *Pet*
 
 Nome: ${dados.pet}
 Espécie: ${dados.especie}
