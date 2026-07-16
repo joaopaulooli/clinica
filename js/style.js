@@ -2,56 +2,88 @@ document.getElementById("cadastroForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    const nome = document.querySelector("[name='nome']").value;
-    const rg = document.querySelector("[name='rg']").value;
-    const cpf = document.querySelector("[name='cpf']").value;
-    const nascimento = document.querySelector("[name='nascimento']").value;
-    const cep = document.querySelector("[name='cep']").value;
-    const rua = document.querySelector("[name='rua']").value;
-    const numero = document.querySelector("[name='numero']").value;
-    const profissao = document.querySelector("[name='profissao']").value;
-    const telefone = document.querySelector("[name='telefone']").value;
+    const dados = {
 
-    const pet = document.querySelector("[name='pet']").value;
-    const especie = document.querySelector("[name='especie']").value;
-    const raca = document.querySelector("[name='raca']").value;
-    const cor = document.querySelector("[name='cor']").value;
-    const petnascimento = document.querySelector("[name='petnascimento']").value;
-    const sexo = document.querySelector("[name='sexo']").value;
-    const castrado = document.querySelector("[name='castrado']").value;
+        nome: document.querySelector("[name='Nome Completo']").value,
 
-    const mensagem =
+        rg: document.querySelector("[name='RG']").value,
+
+        cpf: document.querySelector("[name='CPF']").value,
+
+        nascimento: document.querySelector("[name='Nascimento']").value,
+
+        cep: document.querySelector("[name='CEP']").value,
+
+        rua: document.querySelector("[name='Rua']").value,
+
+        numero: document.querySelector("[name='Número']").value,
+
+        profissao: document.querySelector("[name='Profissão']").value,
+
+        telefone: document.querySelector("[name='Telefone']").value,
+
+        pet: document.querySelector("[name='Nome do Pet']").value,
+
+        especie: document.querySelector("[name='Espécie']").value,
+
+        raca: document.querySelector("[name='Raça']").value,
+
+        cor: document.querySelector("[name='Cor da Pelagem']").value,
+
+        petNascimento: document.querySelector("[name='Nascimento do Pet']").value,
+
+        sexo: document.querySelector("[name='Sexo']").value,
+
+        castrado: document.querySelector("[name='Castrado']").value
+
+    };
+
+    emailjs.send(
+        "service_4gjqlei",
+        "template_t6kry2u",
+        dados
+    ).then(function(){
+
+        const mensagem =
+
 `🐾 *Novo Cadastro Vetlar*
 
 👤 *Tutor*
 
-Nome: ${nome}
-RG: ${rg}
-CPF: ${cpf}
-Nascimento: ${nascimento}
+Nome: ${dados.nome}
+RG: ${dados.rg}
+CPF: ${dados.cpf}
+Nascimento: ${dados.nascimento}
 
-CEP: ${cep}
-Rua: ${rua}
-Número: ${numero}
+CEP: ${dados.cep}
+Rua: ${dados.rua}
+Número: ${dados.numero}
 
-Profissão: ${profissao}
-Telefone: ${telefone}
+Profissão: ${dados.profissao}
+Telefone: ${dados.telefone}
 
 🐶 *Pet*
 
-Nome: ${pet}
-Espécie: ${especie}
-Raça: ${raca}
-Cor: ${cor}
-Nascimento: ${petnascimento}
-Sexo: ${sexo}
-Castrado: ${castrado}`;
+Nome: ${dados.pet}
+Espécie: ${dados.especie}
+Raça: ${dados.raca}
+Cor: ${dados.cor}
+Nascimento: ${dados.petNascimento}
 
-    const numeroWhats = "5543999999999"; // coloque o número da clínica
+Sexo: ${dados.sexo}
 
-    window.open(
-        `https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensagem)}`,
-        "_blank"
-    );
+Castrado: ${dados.castrado}`;
+
+        window.open(
+
+`https://wa.me/5543996861607?text=${encodeURIComponent(mensagem)}`,
+
+"_blank"
+
+);
+
+        window.location="obrigado.html";
+
+    });
 
 });
