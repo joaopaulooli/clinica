@@ -3,9 +3,8 @@
 
 <head>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
-emailjs.init("SUA_PUBLIC_KEY");
+emailjs.init("he4J6s6MFYHQPuRyx");
 </script>
 <meta charset="UTF-8">
 
@@ -33,17 +32,7 @@ emailjs.init("SUA_PUBLIC_KEY");
 Preencha os dados abaixo para realizar seu cadastro e do seu pet.
 </p>
 
-<form
-    action="https://joaopaulo.depinus@gmail.com"
-    method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-
-<input type="hidden" name="_template" value="table">
-
-<input type="hidden" name="_subject" value="Novo Cadastro Vetlar">
-
-<input type="hidden" name="_next" value="https://joaopaulooli.github.io/clinica/obrigado.html">
+<form id="cadastroForm">
 
 <h2>Dados do Tutor</h2>
 
@@ -116,6 +105,8 @@ Enviar Cadastro
 </button>
 
 </form>
+
+<script src="js/script.js"></script>
 
 </div>
 

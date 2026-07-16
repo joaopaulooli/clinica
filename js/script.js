@@ -87,3 +87,28 @@ Castrado: ${dados.castrado}`;
     });
 
 });
+
+emailjs.send(
+    "service_4gjqlei",
+    "template_t6kry2u",
+    dados
+)
+.then(() => {
+
+    const mensagem = `...`;
+
+    window.open(
+        `https://wa.me/5543996861607?text=${encodeURIComponent(mensagem)}`,
+        "_blank"
+    );
+
+    window.location.href = "obrigado.html";
+
+})
+.catch((erro) => {
+
+    console.error(erro);
+
+    alert("Erro ao enviar o cadastro.");
+
+});
