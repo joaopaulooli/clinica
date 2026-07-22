@@ -1,115 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-emailjs.init("he4J6s6MFYHQPuRyx");
-</script>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Clínica Veterinária Vetlar</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("he4J6s6MFYHQPuRyx");
+  </script>
 
-<title>Cadastro - Clínica Veterinária Vetlar</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <div class="container">
+    <img src="img/logo.png" class="logo" alt="Logo da Clínica">
+    <h1>Cadastro da Clínica</h1>
+    <p>Preencha os dados abaixo para realizar seu cadastro e do seu pet.</p>
 
-<div class="container">
+    <form id="cadastroForm">
+      <h2>Dados do Tutor</h2>
+      <input type="text" name="Nome Completo" placeholder="Nome Completo" required>
+      <input type="text" name="RG" placeholder="RG">
+      <input type="text" name="CPF" placeholder="CPF">
+      <label>Data de nascimento</label>
+      <input type="date" name="Nascimento">
+      <input type="text" name="CEP" placeholder="CEP">
+      <input type="text" name="Rua" placeholder="Rua">
+      <input type="text" name="Número" placeholder="Número">
+      <input type="text" name="Profissão" placeholder="Profissão">
+      <input type="text" name="Telefone" placeholder="Telefone">
 
-<img src="img/logo.png" class="logo">
+      <hr>
 
-<h1>Cadastro da Clínica</h1>
+      <h2>Dados do Pet</h2>
+      <input type="text" name="Nome do Pet" placeholder="Nome do Pet">
+      <select name="Espécie">
+        <option>Cão</option>
+        <option>Gato</option>
+        <option>Ave</option>
+        <option>Outro</option>
+      </select>
+      <input type="text" name="Raça" placeholder="Raça">
+      <input type="text" name="Cor da Pelagem" placeholder="Cor da pelagem">
+      <label>Data de nascimento</label>
+      <input type="date" name="Nascimento do Pet">
+      <select name="Sexo">
+        <option>Macho</option>
+        <option>Fêmea</option>
+      </select>
+      <select name="Castrado">
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
 
-<p>
-Preencha os dados abaixo para realizar seu cadastro e do seu pet.
-</p>
+      <button type="submit">Enviar Cadastro</button>
+    </form>
+  </div>
 
-<form id="cadastroForm">
-
-<h2>Dados do Tutor</h2>
-
-<input type="text" name="Nome Completo" placeholder="Nome Completo" required>
-
-<input type="text" name="RG" placeholder="RG">
-
-<input type="text" name="CPF" placeholder="CPF">
-
-<label>Data de nascimento</label>
-
-<input type="date" name="Nascimento">
-
-<input type="text" name="CEP" placeholder="CEP">
-
-<input type="text" name="Rua" placeholder="Rua">
-
-<input type="text" name="Número" placeholder="Número">
-
-<input type="text" name="Profissão" placeholder="Profissão">
-
-<input type="text" name="Telefone" placeholder="Telefone">
-
-<hr>
-
-<h2>Dados do Pet</h2>
-
-<input type="text" name="Nome do Pet" placeholder="Nome do Pet">
-
-<select name="Espécie">
-
-<option>Cão</option>
-
-<option>Gato</option>
-
-<option>Ave</option>
-
-<option>Outro</option>
-
-</select>
-
-<input type="text" name="Raça" placeholder="Raça">
-
-<input type="text" name="Cor da Pelagem" placeholder="Cor da pelagem">
-
-<label>Data de nascimento</label>
-
-<input type="date" name="Nascimento do Pet">
-
-<select name="Sexo">
-
-<option>Macho</option>
-
-<option>Fêmea</option>
-
-</select>
-
-<select name="Castrado">
-
-<option>Sim</option>
-
-<option>Não</option>
-
-</select>
-
-<button type="submit">
-
-Enviar Cadastro
-
-</button>
-
-</form>
-
-<script src="js/script.js"></script>
-
-</div>
-
+  <script src="js/script.js"></script>
 </body>
-
 </html>

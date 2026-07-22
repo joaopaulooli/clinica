@@ -1,145 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Recebido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #f7f1e6;
+      font-family: Poppins, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-<meta charset="UTF-8">
+    .card {
+      background: #fff;
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      width: 500px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    h1 {
+      color: #8c5735;
+    }
 
-<title>Cadastro Recebido</title>
+    p {
+      color: #555;
+      line-height: 1.7;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    .botao {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 35px;
+      background: #9aa37a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-<style>
+    .botao:hover {
+      background: #8c5735;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const numero = "5543996861607";
+      const mensagem = "Olá! Acabei de realizar meu cadastro pelo site da Clínica Veterinária Vetlar.";
 
-body{
-
-margin:0;
-
-background:#F7F1E6;
-
-font-family:Poppins,sans-serif;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
-}
-
-.card{
-
-background:white;
-
-padding:50px;
-
-border-radius:20px;
-
-text-align:center;
-
-width:500px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-}
-
-h1{
-
-color:#8C5735;
-
-}
-
-p{
-
-color:#555;
-
-line-height:1.7;
-
-}
-
-.botao{
-
-display:inline-block;
-
-margin-top:25px;
-
-padding:15px 35px;
-
-background:#9AA37A;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:10px;
-
-font-weight:600;
-
-transition:.3s;
-
-}
-
-.botao:hover{
-
-background:#8C5735;
-
-}
-
-</style>
-
-<script>
-
-window.onload=function(){
-
-const numero="5543996861607";
-
-const mensagem="Olá! Acabei de realizar meu cadastro pelo site da Clínica Veterinária Vetlar.";
-
-setTimeout(function(){
-
-window.open(
-`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`,
-"_blank"
-);
-
-},1500);
-
-}
-
-</script>
-
+      setTimeout(function () {
+        window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, "_blank");
+      }, 1500);
+    };
+  </script>
 </head>
-
 <body>
-
-<div class="card">
-
-<h1>🐾 Cadastro realizado!</h1>
-
-<p>
-
-Recebemos seus dados com sucesso.
-
-Em instantes será aberto o WhatsApp da clínica para facilitar o atendimento.
-
-</p>
-
-<a class="botao"
-
-href="https://wa.me/5543996861607"
-
-target="_blank">
-
-Abrir WhatsApp
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h1>🐾 Cadastro realizado!</h1>
+    <p>
+      Recebemos seus dados com sucesso.
+      Em instantes será aberto o WhatsApp da clínica para facilitar o atendimento.
+    </p>
+    <a class="botao" href="https://wa.me/5543996861607" target="_blank">Abrir WhatsApp</a>
+  </div>
 </body>
-
 </html>
