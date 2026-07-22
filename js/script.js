@@ -21,9 +21,9 @@ document.getElementById("cadastroForm").addEventListener("submit", function (e) 
   };
 
   emailjs
-    .send("service_4gjqlei", "template_t6kry2u", dados)
+    .send("service_xxxxxx", "template_xxxxx", dados)
     .then(function () {
-      const mensagem = `*Novo Cadastro Vetlar*
+      const mensagem = `*Novo Cadastro*
 
 *TUTOR*
 Nome: ${dados.nome}
@@ -46,7 +46,7 @@ Nascimento: ${dados.petNascimento}
 Sexo: ${dados.sexo}
 Castrado: ${dados.castrado}`;
 
-      window.open(`https://wa.me/5543996861607?text=${encodeURIComponent(mensagem)}`, "_blank");
+      window.open(`https://wa.me/55?text=${encodeURIComponent(mensagem)}`, "_blank");
       window.location.href = "obrigado.html";
     })
     .catch(function (erro) {
